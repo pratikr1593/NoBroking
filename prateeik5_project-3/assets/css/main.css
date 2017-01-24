@@ -1,0 +1,192 @@
+/* ============== Main Index Styling & Settigs ================== */
+
+* { margin:0px; }
+body { overflow-x:hidden !important; }
+
+#main {
+			font-family: 'Roboto', sans-serif;
+			//border:1px solid red;
+			min-height:650px;
+	}
+
+/* Main Section Settings */
+.searchbar-menu {
+					border:1px solid transparent;
+					background-color:#E9E9E9;
+					min-height:400px;
+	}
+
+.searchbar-menu h2 {
+						background-color:#FFF;
+						position:relative;
+						margin:40px auto;
+						font-weight:300;
+						font-size:28px;
+						width:660px;
+						padding:5px;
+						color:#444;
+	}
+
+.searchbar-menu h2 > div {
+								border:2px solid #FD3753;
+								position:absolute;
+								border-radius:50%;
+								height:22px;
+								width:22px;
+								top:8.5px;
+								left:0px;
+								
+	}
+
+.searchbar-menu > div {
+							//border:1px solid red;
+							height:50px;
+							width:700px;
+	}
+
+/* Button Settings */
+.searchbar-menu > .btn-div {
+								//border:1px solid red;
+								width:100%;
+	}
+	
+.searchbar-menu .btn-div > button {
+										letter-spacing:0.5px;
+										border-radius:0px;
+										border:none;
+										width:100px;
+										color:#999;
+	}
+
+.searchbar-menu .btn-div > button:hover { background-color:#FFF; }
+
+/* For City-Select */
+.searchbar-menu > div .city-select {
+										//border:1px solid red;
+										display:inline-table;
+										width:130px;
+	}
+
+.searchbar-menu > div .city-select li {
+											background-color:#F5F5F5;
+											padding:9px 15px;
+											display:none;
+	}
+
+.searchbar-menu > div .city-select li:hover {
+												cursor:pointer;
+												color:grey;
+	}
+
+.searchbar-menu > div .city-select li#city-list {
+													border:1px solid #b6b0b6;
+													background-color:#FFF;
+													cursor:pointer;
+													display:inline;
+													color:#000;
+	}
+
+.searchbar-menu > div .city-select li#city-list .fa {
+														font-size:18px;
+														color:grey;
+	}
+
+.searchbar-menu > div .city-select li#city-list .fa-caret-up { display:none; }
+
+/* For Bhk-Select */
+.searchbar-menu > div .bhk-select {
+										//border:1px solid red;
+										display:inline-table;
+										width:130px;
+	}
+
+.searchbar-menu > div .bhk-select li {
+											background-color:#F5F5F5;
+											padding:9px 15px;
+											display:none;
+	}
+
+.searchbar-menu > div .bhk-select li:hover {
+												background-color:#DADADA;
+												cursor:pointer;
+	}
+
+.searchbar-menu > div .bhk-select li#bhk-list {
+													border:1px solid #b6b0b6;
+													background-color:#FFF;
+													cursor:pointer;
+													display:inline;
+													color:#000;
+	}
+
+.searchbar-menu > div .bhk-select li#bhk-list .fa {
+														font-size:18px;
+														color:grey;
+	}
+
+.searchbar-menu > div .bhk-select li#bhk-list .fa-caret-up { display:none; }
+
+/* For Search bar */
+.searchbar-menu #search {
+							box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+							border:1px solid #CCC;
+							position:relative;
+							text-indent:32px;
+							width:250px;
+							height:37px;
+							left:-3px;
+	}
+
+.searchbar-menu #search:focus { border:1px solid red; }
+
+.searchbar-menu .fa-map-marker {
+									position:relative;
+									font-size:18px;
+									color:grey;
+									left:-245px;
+									top:2px;
+	}
+
+/* For Search Button */
+.searchbar-menu #search-btn {
+								background-color:#FD3753;
+								border-radius:0px;
+								margin-left:-22px;
+								margin-top:-2px;
+								padding-bottom:9px;
+								padding-top:8px;
+								border:none;
+								color:#FFF;
+	}
+
+.searchbar-menu #search-btn:hover { background-color:#EB354E; }
+
+/* For Search Items */
+.searchbar-menu .search-items {
+									box-shadow:0px 1px 4px 1px #DDD;
+									background-color:#FFF;
+									position:relative;
+									min-height:180px;
+									display:none;
+									width:250px;
+									left:257px;
+									top:-10px;
+	}
+
+.searchbar-menu .search-items i {
+									color:#FD3753;
+									left:8px;
+									top:10px;
+	}
+
+.searchbar-menu .search-items > div {
+											border-bottom:1px solid #CCC;
+											padding-left:25px;
+											margin-top:-12px;
+	}
+
+.searchbar-menu .search-items > div:hover { background-color:#f8f8f8; }
+
+.searchbar-menu .search-items a { text-decoration:none; }
+.searchbar-menu .search-items a h4 { margin:0px; color:#333; }
+.searchbar-menu .search-items a div { font-size:12px; color:#999; }

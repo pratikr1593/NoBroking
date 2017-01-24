@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- first meta tag for mobile devices displays -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!-- Different CSS Links for website facilitation -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700' rel='stylesheet' type='text/css'>
+        <link href="assets/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"  />
+        <link href="assets/css/general.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+        <link href="images/icons/favicon.ico" rel="icon" type="image/png" />
+        <title>Search Bar</title>
+    </head>
+
+<body>
+
+<div id="main">
+	
+    <br /><br /><br />
+    
+	<section class="searchbar-menu">
+    	<h2 align="center">
+        	<div></div>
+            <div style="position:absolute; left:638px;"></div>
+        	INDIA'S FIRST PROPERTY OWNER DATABASE
+        </h2>
+        
+        <div class="btn-div margin-bottom-20" align="center">
+        	<button class="btn btn-default">Resale</button>
+            &ensp;
+            <button class="btn btn-default">Rent</button>
+        </div>
+        
+    	<div class="container-fluid">
+        	<ul class="city-select list-group">
+            	<li class="list-unstyled" id="city-list"> <font>Mumbai &emsp;</font>&emsp; <i class="fa fa-caret-down"></i><i class="fa fa-caret-up"></i>
+                	<li class="list-unstyled" style="margin-top:8px;">Mumbai &emsp;</li>
+                    <li class="list-unstyled">Bangalore&ensp;</li>
+                    <li class="list-unstyled">Pune &emsp;&emsp;&ensp;</li>
+                    <li class="list-unstyled">Chennai &emsp; </li>
+                </li>
+            </ul>
+            <ul class="bhk-select list-group" style="margin-left:-7px;">
+            	<li class="list-unstyled" id="bhk-list"> <font>Any BHK</font> &emsp;&emsp; <i class="fa fa-caret-down"></i><i class="fa fa-caret-up"></i>
+                	<li class="list-unstyled" style="margin-top:8px;"><input type="checkbox" value="1 RK &emsp; &ensp;" /> 1 RK</li>
+                    <li class="list-unstyled"><input type="checkbox" value="1 BHK &emsp;" /> 1 BHK</li>
+                    <li class="list-unstyled"><input type="checkbox" value="2 BHK &emsp;" /> 2 BHK</li>
+                    <li class="list-unstyled"><input type="checkbox" value="3 BHK &emsp;" /> 3 BHK</li>
+                    <li class="list-unstyled"><input type="checkbox" value="4 BHK &emsp;" /> 4 BHK</li>
+                </li>
+            </ul>
+            <input type="search" id="search" placeholder="Search property by sell/buy by location" />
+        	<i class="fa fa-map-marker"></i>
+            <a href="dummy.html" class="btn btn-default" id="search-btn">
+            	&emsp; <i class="fa fa-search"></i>&ensp; Search &emsp;
+            </a>
+            <div class="search-items">
+            	<i class="fa fa-map-marker"></i>
+                <div>
+                	<a href="https://www.google.com">
+                		<h4>A</h4>
+                		<div>Western Express Highway, Asha Nagar,</div>
+                	</a>
+                </div>
+                <i class="fa fa-map-marker"></i>
+                <div>
+                	<a href="https://www.google.com">
+                		<h4>Aa</h4>
+                		<div>Western Express Highway, Asha Nagar,</div>
+                	</a>
+                </div>
+                <i class="fa fa-map-marker"></i>
+                <div>
+                	<a href="https://www.google.com">
+                		<h4>Aa</h4>
+                		<div>Western Express Highway, Asha Nagar,</div>
+                	</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script src="assets/js/jquery-1.9.1.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	
+	/* Dropdown Settings for City List */
+	$("#city-list").click(function() {
+        $(".searchbar-menu > div .city-select li:not(#city-list)").fadeToggle();
+    	$(".city-select .fa-caret-down").toggle();
+		$(".city-select .fa-caret-up").toggle();
+	});
+	$(".searchbar-menu > div .city-select li:not(#city-list)").click(function() {
+        var value1 = $(this).html();
+		$("#city-list font").text(value1);
+		$(".searchbar-menu > div .city-select li:not(#city-list)").hide();
+		$(".city-select .fa-caret-down").show();
+		$(".city-select .fa-caret-up").hide();
+    });
+	
+	/* Dropdown Settings for BHK List */
+	$("#bhk-list").click(function() {
+        $(".searchbar-menu > div .bhk-select li:not(#bhk-list)").fadeToggle();
+    	$(".bhk-select .fa-caret-down").toggle();
+		$(".bhk-select .fa-caret-up").toggle();
+	});
+	$(".searchbar-menu > div .bhk-select li:not(#bhk-list) input").click(function() {
+        var value2 = $(this).val();
+		$("#bhk-list font").text(value2);
+		$(".searchbar-menu > div .bhk-select li:not(#bhk-list)").hide();
+		$(".bhk-select .fa-caret-down").show();
+		$(".bhk-select .fa-caret-up").hide();
+    });
+	
+	/* Dropdown Settings for Search Items */
+	$("#search").keypress(function() {
+        $(".search-items").slideDown();
+    });
+	
+});
+
+</script>
+
+</body>
+</html>
